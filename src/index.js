@@ -10,7 +10,14 @@ import App from './component/App';
 import movies from './reducers';
 
 const store = createStore(movies);
-console.log(store);
+console.log('store', store);
+console.log('beforeState',store.getState());
+
+store.dispatch({
+  type: 'ADD_MOVIES',
+  movies: [{name: 'Batmam'}]
+})
+console.log('AfterState', store.getState());
 
 ReactDOM.render(
   <React.StrictMode>
