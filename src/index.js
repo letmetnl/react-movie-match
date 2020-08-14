@@ -7,9 +7,9 @@ import {createStore} from 'redux';
 // importing files
 import './index.css';
 import App from './component/App';
-import movies from './reducers';
+import rootReducer from './reducers';
 
-const store = createStore(movies);
+const store = createStore(rootReducer);
 console.log('store', store);
 // console.log('beforeState',store.getState());
 
